@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: whitesmoke;
+  margin: 0 auto;
+  width: 1200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Times New Roman", Times, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.container {
+  /* border: solid black 1px; */
+  width: 800px;
+  height: 800px;
+  display: grid;
+  box-shadow: 0px 0px 10px 1px rgb(146, 146, 146);
+}
+
+.littlegrid {
+  border: 0.1px;
+}
+
+button {
+  width: 100px;
+  border: solid 1px rgb(196, 194, 194);
+  font-size: 1rem;
+  background-color: grey;
+  color: rgb(204, 201, 197);
+}
+
+button:active {
+  background: rgb(77, 76, 76);
+  transform: translateY(2px);
+}
