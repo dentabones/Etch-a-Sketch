@@ -33,3 +33,8 @@ const setGridColor = (e) => {
 const setBlackColor = (e) => {
   e.target.style.backgroundColor = "#000000";
 };
+
+const clearContainer = function () {
+  containerEl.innerHTML = "";
+  createDivs(currentSize);
+};
