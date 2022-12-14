@@ -73,3 +73,6 @@ const setGridSize = function (e) {
   //   containerEl.style.gridTemplateRows = `repeat(${size}, 1fr)`;
   // }
 };
+
+clear.addEventListener("click", clearContainer);
+gridSize.forEach((button) => button.addEventListener("click", setGridSize));
