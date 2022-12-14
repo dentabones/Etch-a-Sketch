@@ -38,3 +38,38 @@ const clearContainer = function () {
   containerEl.innerHTML = "";
   createDivs(currentSize);
 };
+
+const setGridSize = function (e) {
+  //Refactored code
+  if (!isNaN(parseInt(this.className))) {
+    console.log(parseInt(this.className));
+    clearContainer();
+    let size = parseInt(this.className);
+    containerEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    containerEl.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    currentSize = size * size;
+    createDivs(currentSize);
+  }
+  //Old code
+  // if (this.className === "8") {
+  //   size = 8;
+  //   containerEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  //   containerEl.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  // } else if (this.className === "16") {
+  //   size = 16;
+  //   containerEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  //   containerEl.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  // } else if (this.className === "32") {
+  //   size = 32;
+  //   containerEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  //   containerEl.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  // } else if (this.className === "64") {
+  //   size = 64;
+  //   containerEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  //   containerEl.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  // } else if (this.className === "100") {
+  //   size = 100;
+  //   containerEl.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  //   containerEl.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  // }
+};
